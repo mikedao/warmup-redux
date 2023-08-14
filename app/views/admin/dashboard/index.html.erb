@@ -1,0 +1,15 @@
+<h1> Problems Index </h1>
+
+<% @problems.each do |problem| %>
+  <p>
+    <%= problem.title %>
+    <br><hr>
+    <%= problem.content %>
+    <br><hr>
+    <br>
+    <%= link_to "Show", admin_problem_path(problem) %>
+    <%= link_to "Edit", edit_admin_problem_path(problem) %>
+  </p>
+<% end %>
+
+<%= button_to "Create Problem", new_admin_problem_path, method: :get %>

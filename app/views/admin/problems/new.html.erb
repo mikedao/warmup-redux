@@ -1,0 +1,12 @@
+<%# app/views/messages/_form.html.erb %>
+<%= form_with url: "/admin/problems", model: @message do |form| %>
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+    <br><hr>
+    <%= form.label :content %>
+    <%= form.rich_text_area :content %>
+    <br>
+    <%= form.submit %>
+  </div>
+<% end %>

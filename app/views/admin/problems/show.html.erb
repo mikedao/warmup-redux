@@ -1,0 +1,11 @@
+
+  <p>
+    <%= @problem.title %>
+    <br><hr>
+    <%= @problem.content %>
+    <br><hr>
+    <br>
+    <%= link_to "Show", admin_problem_path(@problem) %>
+    <%= link_to "Edit", edit_admin_problem_path(@problem) %>
+    <%= button_to "Delete", admin_problem_path(@problem), method: :delete, data: { confirm: "Are you sure?" } %>
+  </p>
